@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
 import { vi, beforeEach } from 'vitest';
-import { toHaveNoViolations } from 'jest-axe';
+import '@testing-library/jest-dom';
+import './test-utils/axe-matcher';
 
 // Mock localStorage
 const localStorageMock = {
@@ -44,9 +44,6 @@ Object.defineProperty(window, 'ResizeObserver', {
   writable: true,
   value: ResizeObserverMock,
 });
-
-// Extend expect with axe matchers
-expect.extend(toHaveNoViolations);
 
 // Reset mocks before each test
 beforeEach(() => {

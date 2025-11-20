@@ -40,7 +40,8 @@ const SalesChartComponent: React.FC<SalesChartProps> = ({
 
   // Memoize custom tooltip component to prevent recreation on every render
   const CustomTooltip = React.useMemo(() => {
-    return ({ active, payload, label }: { active?: boolean; payload?: Array<{ value: number }>; label?: string }) => {
+    return (props: any) => {
+      const { active, payload, label } = props;
       if (active && payload && payload.length) {
         return (
           <div
