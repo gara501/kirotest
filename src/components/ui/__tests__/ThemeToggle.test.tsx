@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { axe } from 'jest-axe';
 import { ThemeToggle } from '../ThemeToggle';
 import { ThemeProvider } from '../../../providers/ThemeProvider';
@@ -21,7 +21,7 @@ describe('ThemeToggle', () => {
   });
 
   it('cycles through themes when clicked', () => {
-    (window.localStorage.getItem as any).mockReturnValue('"light"');
+    vi.spyOn(window.localStorage, 'getItem').mockReturnValue('"light"');
     
     renderWithProvider(<ThemeToggle />);
     

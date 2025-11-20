@@ -10,14 +10,14 @@ interface ThemeToggleProps {
 export function ThemeToggle({ className = '' }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme();
 
-  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [
+  const themes: { value: Theme; label: string; icon: React.ComponentType<React.SVGProps<SVGSVGElement>> }[] = [
     { value: 'light', label: 'Light', icon: SunIcon },
     { value: 'dark', label: 'Dark', icon: MoonIcon },
     { value: 'system', label: 'System', icon: ComputerDesktopIcon },
   ];
 
   const currentThemeIndex = themes.findIndex(t => t.value === theme);
-  
+
   const handleToggle = () => {
     const nextIndex = (currentThemeIndex + 1) % themes.length;
     setTheme(themes[nextIndex].value);
