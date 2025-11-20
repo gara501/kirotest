@@ -1,0 +1,26 @@
+{
+  "enabled": true,
+  "name": "Auto Commit Message",
+  "description": "Automatically generates a commit message summarizing all staged changes when git add . is executed",
+  "version": "1",
+  "when": {
+    "type": "userTriggered",
+    "patterns": [
+      "src/**/*",
+      "docs/**/*",
+      "specs/**/*",
+      "package.json",
+      "README.md",
+      "*.ts",
+      "*.tsx",
+      "*.js",
+      "*.jsx",
+      "*.md",
+      "*.json"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Analyze the git staged changes and generate a concise, descriptive commit message that summarizes what was modified. Focus on the key changes made to the codebase, including new features, bug fixes, refactoring, or documentation updates. Format the message following conventional commit standards if applicable."
+  }
+}
