@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card > renders consistently (snapshot) 1`] = `
+<div
+  class="rounded-lg border text-card-foreground bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-4 shadow-sm"
+>
+  <p>
+    Snapshot content
+  </p>
+</div>
+`;
+
+exports[`Card > renders consistently with different padding sizes (snapshot) > card-padding-lg 1`] = `
+<div
+  class="rounded-lg border text-card-foreground bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-6 shadow-sm"
+>
+  <p>
+    Large
+  </p>
+</div>
+`;
+
+exports[`Card > renders consistently with different padding sizes (snapshot) > card-padding-md 1`] = `
+<div
+  class="rounded-lg border text-card-foreground bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-4 shadow-sm"
+>
+  <p>
+    Medium
+  </p>
+</div>
+`;
+
+exports[`Card > renders consistently with different padding sizes (snapshot) > card-padding-sm 1`] = `
+<div
+  class="rounded-lg border text-card-foreground bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-3 shadow-sm"
+>
+  <p>
+    Small
+  </p>
+</div>
+`;

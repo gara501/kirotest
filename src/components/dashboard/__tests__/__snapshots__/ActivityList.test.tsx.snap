@@ -1,0 +1,245 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ActivityList > renders consistently (snapshot) 1`] = `
+<div
+  class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
+>
+  <div
+    class="px-4 py-3 border-b border-gray-200 dark:border-gray-700"
+  >
+    <div
+      class="flex items-center justify-between mb-3"
+    >
+      <h3
+        class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+      >
+        Recent Activity
+      </h3>
+    </div>
+    <div
+      class="flex flex-wrap gap-2"
+    >
+      <button
+        class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-colors bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+      >
+        <span
+          class="mr-1"
+        >
+          📋
+        </span>
+        All
+        <span
+          class="ml-1.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-1.5 py-0.5 rounded-full text-xs"
+        >
+          3
+        </span>
+      </button>
+      <button
+        class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+      >
+        <span
+          class="mr-1"
+        >
+          ✅
+        </span>
+        Success
+        <span
+          class="ml-1.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-1.5 py-0.5 rounded-full text-xs"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+      >
+        <span
+          class="mr-1"
+        >
+          ℹ️
+        </span>
+        Info
+        <span
+          class="ml-1.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-1.5 py-0.5 rounded-full text-xs"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+      >
+        <span
+          class="mr-1"
+        >
+          ⚠️
+        </span>
+        Warning
+        <span
+          class="ml-1.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-1.5 py-0.5 rounded-full text-xs"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+      >
+        <span
+          class="mr-1"
+        >
+          ❌
+        </span>
+        Error
+        <span
+          class="ml-1.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-1.5 py-0.5 rounded-full text-xs"
+        >
+          0
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="overflow-y-auto"
+    style="max-height: 400px;"
+  >
+    <div
+      class="divide-y divide-gray-100 dark:divide-gray-700"
+    >
+      <div
+        class="flex items-start space-x-3 p-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+      >
+        <div
+          class="flex-shrink-0"
+        >
+          <img
+            alt="John Doe"
+            class="w-8 h-8 rounded-full object-cover"
+            src="https://example.com/avatar.jpg"
+          />
+        </div>
+        <div
+          class="flex-1 min-w-0"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate"
+            >
+              User Registration
+            </p>
+            <p
+              class="text-xs text-gray-500 dark:text-gray-400 flex-shrink-0 ml-2"
+            >
+              5m ago
+            </p>
+          </div>
+          <p
+            class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+          >
+            New user John Doe registered successfully
+          </p>
+          <p
+            class="text-xs text-gray-500 dark:text-gray-400 mt-1"
+          >
+            by 
+            John Doe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-start space-x-3 p-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+      >
+        <div
+          class="flex-shrink-0"
+        >
+          <div
+            class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400"
+          >
+            ⚠
+          </div>
+        </div>
+        <div
+          class="flex-1 min-w-0"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate"
+            >
+              High CPU Usage
+            </p>
+            <p
+              class="text-xs text-gray-500 dark:text-gray-400 flex-shrink-0 ml-2"
+            >
+              30m ago
+            </p>
+          </div>
+          <p
+            class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+          >
+            Server CPU usage exceeded 80% threshold
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-start space-x-3 p-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+      >
+        <div
+          class="flex-shrink-0"
+        >
+          <div
+            class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-xs font-medium text-gray-700 dark:text-gray-300"
+          >
+            AU
+          </div>
+        </div>
+        <div
+          class="flex-1 min-w-0"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate"
+            >
+              System Update
+            </p>
+            <p
+              class="text-xs text-gray-500 dark:text-gray-400 flex-shrink-0 ml-2"
+            >
+              2h ago
+            </p>
+          </div>
+          <p
+            class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+          >
+            System maintenance completed successfully
+          </p>
+          <p
+            class="text-xs text-gray-500 dark:text-gray-400 mt-1"
+          >
+            by 
+            Admin User
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActivityList > renders consistently with empty state (snapshot) > activity-list-empty 1`] = `
+<div
+  class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6"
+>
+  <div
+    class="text-center text-gray-500 dark:text-gray-400"
+  >
+    <p
+      class="text-sm"
+    >
+      No recent activities
+    </p>
+  </div>
+</div>
+`;

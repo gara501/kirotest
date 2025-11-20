@@ -1,0 +1,36 @@
+hooks:
+  # ------------------------------------------------------
+  # 🔵 COMMITS HOOK
+  # ------------------------------------------------------
+  onCommit:
+    - name: lint-before-commit
+      description: Run ESLint before commit
+      run: |
+        echo "Running ESLint..."
+        npm run lint
+
+    - name: test-before-commit
+      description: Run tests before allowing the commit
+      run: |
+        echo "Running tests..."
+        npm run test -- --watch=false
+
+    - name: update-readme-on-commit
+      description: Generate README updates based on changed files
+      kiro: updateReadmeSection
+
+  # ------------------------------------------------------
+  # 🟣 MERGE TO MAIN HOOK
+  # ------------------------------------------------------
+  onMergeToMain:
+    - name: regenerate-dashboard-docs
+      description: Rebuild documentation based on specs
+      kiro: generateDashboardDocs
+
+    - name: bump-version
+      description: Auto-increment patch version on merge
+      kiro: bumpVersionPatch
+
+    - name: update-changelog
+      description: Create or update CHANGELOG.md using PR summary
+      kiro: generateChangelog

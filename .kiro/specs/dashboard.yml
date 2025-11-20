@@ -1,0 +1,38 @@
+spec:
+  name: dashboard
+  description: Dashboard demo with 5 UI components
+
+  # Source of truth
+  input: specs/dashboard.md
+
+  generate:
+    components:
+      enabled: true
+      outputDir: src/components/dashboard/
+      typescript: true
+      tailwind: true
+      react: true
+
+    documentation:
+      enabled: true
+      format: markdown
+      output: docs/dashboard.md
+
+  enforce:
+    designSystem:
+      tailwind: true
+      darkMode: true
+      responsive: true
+
+    architecture:
+      pattern: feature-based
+      folderStructure:
+        - components/
+        - hooks/
+        - types/
+        - utils/
+
+    testing:
+      jest: true
+      reactTestingLibrary: true
+      generateTestsForComponents: true

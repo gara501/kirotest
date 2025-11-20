@@ -1,0 +1,24 @@
+spec:
+  name: versioning
+  description: Manage semantic versioning for the project
+
+  versioning:
+    strategy: semantic
+    defaultBump: patch
+
+    detectBreakingChanges:
+      enabled: true
+      keywords:
+        - "BREAKING CHANGE"
+        - "major"
+
+    updateFiles:
+      - package.json
+      - package-lock.json
+
+    changelogIntegration:
+      enabled: true
+      file: CHANGELOG.md
+
+  git:
+    commitMessageFormat: "chore(release): v{{version}}"

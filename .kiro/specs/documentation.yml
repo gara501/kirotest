@@ -1,0 +1,28 @@
+spec:
+  name: documentation
+  description: Generate code change documentation and PR summaries
+
+  documentation:
+    changeSummary:
+      enabled: true
+      includeModifiedFiles: true
+      includeCommitMessage: true
+      includeDiffSummary: true
+
+    prSummary:
+      enabled: true
+      includeAuthor: true
+      includeLinkedIssues: true
+      includeBreakingChanges: true
+
+  readme:
+    autoInject:
+      enabled: true
+      sectionTitle: "## 📌 Latest Changes"
+      maxItems: 10
+
+  changelog:
+    format:
+      versionHeader: "## Version {{version}}"
+      itemFormat: "- {{message}} ({{file}})"
+    includeDate: true

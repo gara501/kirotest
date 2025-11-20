@@ -1,0 +1,109 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`KPICard > renders consistently (snapshot) 1`] = `
+<div
+  class="rounded-lg border text-card-foreground bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-4 shadow-sm h-32 sm:h-36 lg:h-40 flex flex-col justify-between transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 hover:-translate-y-1 cursor-pointer"
+>
+  <div
+    class="flex items-center justify-between"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="flex-shrink-0 p-2 rounded-lg bg-blue-50 dark:bg-blue-900/20"
+      >
+        <div
+          class="h-5 w-5 text-blue-600 dark:text-blue-400"
+          data-testid="mock-icon"
+        >
+          Icon
+        </div>
+      </div>
+      <h3
+        class="text-sm font-medium text-gray-700 dark:text-gray-300 truncate"
+      >
+        Total Users
+      </h3>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <p
+      class="text-2xl font-bold text-gray-900 dark:text-white"
+    >
+      1,234
+    </p>
+  </div>
+</div>
+`;
+
+exports[`KPICard > renders consistently with trend data (snapshot) > kpi-card-with-trend 1`] = `
+<div
+  class="rounded-lg border text-card-foreground bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 p-4 shadow-sm h-32 sm:h-36 lg:h-40 flex flex-col justify-between transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 hover:-translate-y-1 cursor-pointer"
+>
+  <div
+    class="flex items-center justify-between"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="flex-shrink-0 p-2 rounded-lg bg-blue-50 dark:bg-blue-900/20"
+      >
+        <div
+          class="h-5 w-5 text-blue-600 dark:text-blue-400"
+          data-testid="mock-icon"
+        >
+          Icon
+        </div>
+      </div>
+      <h3
+        class="text-sm font-medium text-gray-700 dark:text-gray-300 truncate"
+      >
+        Total Users
+      </h3>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <p
+      class="text-2xl font-bold text-gray-900 dark:text-white"
+    >
+      1,234
+    </p>
+  </div>
+  <div
+    class="mt-2 flex items-center justify-between"
+  >
+    <div
+      class="inline-flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20"
+    >
+      <svg
+        aria-hidden="true"
+        class="h-3 w-3"
+        data-slot="icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <span>
+        +12%
+      </span>
+    </div>
+    <span
+      class="text-xs text-gray-500 dark:text-gray-400"
+    >
+      vs last month
+    </span>
+  </div>
+</div>
+`;

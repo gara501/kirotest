@@ -1,0 +1,32 @@
+actions:
+  # ------------------------------------------------------
+  # 📘 UPDATE README
+  # ------------------------------------------------------
+  updateReadmeSection:
+    description: Inject a summary of changed files into README
+    usesSpec: documentation
+    output: README.md
+
+  # ------------------------------------------------------
+  # 📚 GENERATE DASHBOARD DOCS
+  # ------------------------------------------------------
+  generateDashboardDocs:
+    description: Generate dashboard documentation pages
+    usesSpec: dashboard
+    output: docs/dashboard.md
+
+  # ------------------------------------------------------
+  # 🟡 GENERATE CHANGELOG
+  # ------------------------------------------------------
+  generateChangelog:
+    description: Build or update CHANGELOG.md based on merged PR
+    usesSpec: documentation
+    output: CHANGELOG.md
+
+  # ------------------------------------------------------
+  # 🟢 VERSION BUMP
+  # ------------------------------------------------------
+  bumpVersionPatch:
+    description: Increment patch version automatically (semantic)
+    usesSpec: versioning
+    output: package.json

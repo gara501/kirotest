@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "name": "Documentation Sync",
+  "description": "Listens to TypeScript source files and configuration changes to automatically update project documentation in README.md and specs folder",
+  "version": "1",
+  "when": {
+    "type": "userTriggered",
+    "patterns": [
+      "src/**/*.tsx",
+      "src/**/*.ts",
+      "*.ts",
+      "*.tsx",
+      "package.json",
+      "tsconfig.json",
+      "vite.config.ts",
+      "eslint.config.js"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Source code has been modified in this TypeScript React project. Please review the changes and update the documentation accordingly. Focus on updating the README.md file and any relevant documentation in the /specs folder to reflect the current state of the codebase, including any new components, hooks, utilities, or architectural changes. Ensure the documentation accurately describes the project structure, features, and usage patterns."
+  }
+}

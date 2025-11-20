@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > renders consistently (snapshot) 1`] = `
+<header
+  class="sticky top-0 z-50 flex h-16 items-center justify-between bg-gray-800 dark:bg-gray-900 border-b border-gray-700 dark:border-gray-600 px-4 lg:px-6"
+>
+  <div
+    class="flex items-center space-x-4"
+  >
+    <button
+      aria-label="Open sidebar"
+      class="lg:hidden p-2 rounded-md transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+    >
+      <svg
+        aria-hidden="true"
+        class="h-5 w-5"
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <h1
+      class="text-xl font-semibold text-white lg:text-2xl"
+    >
+      Dashboard
+    </h1>
+  </div>
+  <div
+    class="flex items-center space-x-2 lg:space-x-4"
+  >
+    <div
+      class="hidden sm:flex"
+      data-testid="theme-toggle"
+    >
+      Theme Toggle
+    </div>
+  </div>
+</header>
+`;
