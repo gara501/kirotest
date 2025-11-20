@@ -26,7 +26,7 @@ const ActivityItemComponent: React.FC<ActivityItemProps> = ({ activity }) => {
       .join('')
       .toUpperCase()
       .slice(0, 2);
-  }, [user?.name]);
+  }, [user]);
 
   // Memoize timestamp formatting to avoid recalculation
   const formattedTimestamp = React.useMemo(() => {

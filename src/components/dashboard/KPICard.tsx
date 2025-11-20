@@ -28,7 +28,7 @@ const KPICardComponent = React.forwardRef<HTMLDivElement, KPICardProps>(
         default:
           return null;
       }
-    }, [trend?.direction]);
+    }, [trend]);
 
     // Memoize trend colors to avoid recalculation on every render
     const trendColors = React.useMemo(() => {
@@ -44,7 +44,7 @@ const KPICardComponent = React.forwardRef<HTMLDivElement, KPICardProps>(
         default:
           return '';
       }
-    }, [trend?.direction]);
+    }, [trend]);
 
     // Memoize formatted value to avoid recalculation
     const formattedValue = React.useMemo(() => {

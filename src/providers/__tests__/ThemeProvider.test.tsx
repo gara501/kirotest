@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ThemeProvider } from '../ThemeProvider';
 import { useTheme } from '../../hooks/useTheme';
 
@@ -26,7 +26,7 @@ function TestComponent() {
 
 describe('ThemeProvider', () => {
   beforeEach(() => {
-    (window.localStorage.getItem as any).mockReturnValue(null);
+    vi.spyOn(window.localStorage, 'getItem').mockReturnValue(null);
   });
 
   it('provides default theme when no stored theme exists', () => {
@@ -65,7 +65,7 @@ describe('ThemeProvider', () => {
   });
 
   it('loads theme from localStorage on initialization', () => {
-    (window.localStorage.getItem as any).mockReturnValue('"dark"');
+    vi.spyOn(window.localStorage, 'getItem').mockReturnValue('"dark"');
     
     render(
       <ThemeProvider>

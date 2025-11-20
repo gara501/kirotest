@@ -1,8 +1,7 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import type { Theme, ThemeContextValue } from '../types/theme';
-
-export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+import { ThemeContext } from '../contexts/ThemeContext';
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -11,7 +10,10 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
   const [theme, setTheme] = useLocalStorage<Theme>('dashboard-theme', defaultTheme);
-  const [systemTheme, setSystemTheme] = useState<'light' | 'dark'>('light');
+  // Initialize system theme based on current media query
+  const [systemTheme, setSystemTheme] = useState<'light' | 'dark'>(() => 
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  );
 
   // Listen for system theme changes
   useEffect(() => {
@@ -20,9 +22,6 @@ export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProvid
     const handleChange = (e: MediaQueryListEvent) => {
       setSystemTheme(e.matches ? 'dark' : 'light');
     };
-
-    // Set initial system theme
-    setSystemTheme(mediaQuery.matches ? 'dark' : 'light');
     
     // Listen for changes
     mediaQuery.addEventListener('change', handleChange);
