@@ -1,0 +1,28 @@
+{
+  "enabled": true,
+  "name": "Security Vulnerability Scanner",
+  "description": "Automatically reviews changed files for potential security issues including API keys, tokens, credentials, private keys, encryption keys, certificates, authentication tokens, session IDs, passwords, secrets in configuration files, IP addresses with sensitive data, hardcoded internal URLs, and database connection credentials. Provides specific security risk analysis and secure alternative recommendations.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.js",
+      "src/**/*.jsx",
+      "*.json",
+      "*.env",
+      "*.config.js",
+      "*.config.ts",
+      "vite.config.ts",
+      "package.json",
+      ".env*",
+      "config/**/*",
+      "scripts/**/*"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Review the changed files for potential security issues. For each file, scan for: 1. API keys, tokens, or credentials in source code 2. Private keys or sensitive credentials 3. Encryption keys or certificates 4. Authentication tokens or session IDs 5. Passwords or secrets in configuration files 6. IP addresses containing sensitive data 7. Hardcoded internal URLs 8. Database connection credentials. For each security issue found, provide: 1. The specific security risk and why it's dangerous 2. A secure alternative approach 3. Security best practices recommendations. Focus on practical, actionable advice."
+  }
+}

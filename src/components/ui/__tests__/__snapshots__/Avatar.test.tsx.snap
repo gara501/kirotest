@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Avatar > renders consistently across different sizes (snapshot) > avatar-lg 1`] = `
+<div
+  class="relative inline-flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden h-10 w-10 text-base"
+>
+  <span
+    class="font-medium text-gray-700 dark:text-gray-300"
+  >
+    JD
+  </span>
+</div>
+`;
+
+exports[`Avatar > renders consistently across different sizes (snapshot) > avatar-md 1`] = `
+<div
+  class="relative inline-flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden h-8 w-8 text-sm"
+>
+  <span
+    class="font-medium text-gray-700 dark:text-gray-300"
+  >
+    JD
+  </span>
+</div>
+`;
+
+exports[`Avatar > renders consistently across different sizes (snapshot) > avatar-sm 1`] = `
+<div
+  class="relative inline-flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden h-6 w-6 text-xs"
+>
+  <span
+    class="font-medium text-gray-700 dark:text-gray-300"
+  >
+    JD
+  </span>
+</div>
+`;
+
+exports[`Avatar > renders consistently across different sizes (snapshot) > avatar-xl 1`] = `
+<div
+  class="relative inline-flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden h-12 w-12 text-lg"
+>
+  <span
+    class="font-medium text-gray-700 dark:text-gray-300"
+  >
+    JD
+  </span>
+</div>
+`;
+
+exports[`Avatar > renders consistently with image (snapshot) 1`] = `
+<div
+  class="relative inline-flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden h-8 w-8 text-sm"
+>
+  <img
+    alt="John Doe"
+    class="h-full w-full object-cover"
+    src="https://example.com/avatar.jpg"
+  />
+</div>
+`;
+
+exports[`Avatar > renders consistently with initials (snapshot) > avatar-initials 1`] = `
+<div
+  class="relative inline-flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden h-8 w-8 text-sm"
+>
+  <span
+    class="font-medium text-gray-700 dark:text-gray-300"
+  >
+    JD
+  </span>
+</div>
+`;

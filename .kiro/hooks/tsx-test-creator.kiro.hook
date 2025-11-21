@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "TSX Test File Creator",
+  "description": "Automatically creates a test file with proper header comment when a new .tsx file is created inside /src/components",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/components/**/*.tsx"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new TSX component file has been created at {filePath}. Create a corresponding test file in the same directory under a __tests__ folder with the same name but adding .test.tsx extension. The test file should include the header comment: /**\\n * Tests for \"{componentName}\"\\n */ where {componentName} is extracted from the file name. Make sure to create the __tests__ directory if it doesn't exist."
+  }
+}
